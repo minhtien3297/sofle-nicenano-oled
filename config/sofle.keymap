@@ -45,34 +45,6 @@
             label = "LANGUAGE";
         };
 
-        volume_down: volume_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_COMMAND>,
-                <&macro_press>,
-                <&kp MINUS>,
-                <&macro_release>,
-                <&kp LEFT_COMMAND>;
-
-            label = "VOLUME_UP";
-        };
-
-        volume_up: volume_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_COMMAND>,
-                <&macro_press>,
-                <&kp EQUAL>,
-                <&macro_release>,
-                <&kp LEFT_COMMAND>;
-
-            label = "VOLUME_DOWN";
-        };
-
         tmux: tmux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -132,7 +104,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_MENU_DECREASE C_MENU_INCREASE>,
+                <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
